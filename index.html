@@ -2,201 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
- <meta name="google-site-verification" content="uNgIK-I8XyaJm4a8_elKf8darKpd90ABaBACKDHRqYY" />
+  <meta name="google-site-verification" content="uNgIK-I8XyaJm4a8_elKf8darKpd90ABaBACKDHRqYY" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>YT Creator Helper</title>
   <meta name="description" content="Free YouTube SEO helper for titles, descriptions, hashtags and keywords.">
-
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: white;
-      min-height: 100vh;
-    }
-
-    header {
-      background: #1e1e1e;
-      padding: 18px 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    header h1 {
-      color: #ff0000;
-      font-size: 28px;
-    }
-
-    header p {
-      color: #bbb;
-      margin-top: 6px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px 16px 50px;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .hero span {
-      color: #ff0000;
-    }
-
-    .card {
-      background: #1e1e1e;
-      border: 1px solid #333;
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 140px;
-      background: #111;
-      color: white;
-      border: 1px solid #444;
-      border-radius: 10px;
-      padding: 14px;
-      font-size: 16px;
-      resize: vertical;
-      outline: none;
-    }
-
-    textarea:focus {
-      border-color: #ff0000;
-    }
-
-    button {
-      border: none;
-      border-radius: 10px;
-      padding: 13px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .generate {
-      width: 100%;
-      margin-top: 15px;
-      background: #ff0000;
-      color: white;
-    }
-
-    .generate:hover {
-      background: #cc0000;
-    }
-
-    .download {
-      display: inline-block;
-      background: #fff;
-      color: #111;
-      text-decoration: none;
-      margin-top: 12px;
-    }
-
-    .download:hover {
-      background: #ddd;
-    }
-
-    .result {
-      display: none;
-    }
-
-    .result h3 {
-      color: #ff0000;
-      margin-bottom: 12px;
-    }
-
-    .result-box {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 18px;
-      white-space: pre-line;
-      line-height: 1.6;
-    }
-
-    .copy-btn {
-      background: #333;
-      color: white;
-      padding: 9px 14px;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    .copy-btn:hover {
-      background: #444;
-    }
-
-    .app-card {
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      color: #888;
-      padding: 25px;
-      border-top: 1px solid #333;
-      font-size: 14px;
-    }
-
-    .loading {
-      display: none;
-      text-align: center;
-      color: #aaa;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 24px;
-      }
-
-      header h1 {
-        font-size: 23px;
-      }
-
-      .card {
-        padding: 16px;
-      }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#0f0f0f;color:white;min-height:100vh}
+    header{background:#1e1e1e;padding:18px 20px;text-align:center;border-bottom:1px solid #333}
+    header h1{color:#ff0000;font-size:28px}
+    header p{color:#bbb;margin-top:6px}
+    .container{max-width:900px;margin:auto;padding:25px 16px 50px}
+    .hero{text-align:center;margin-bottom:25px}
+    .hero h2{font-size:30px;margin-bottom:10px}
+    .hero span{color:#ff0000}
+    .card{background:#1e1e1e;border:1px solid #333;border-radius:14px;padding:20px;margin-bottom:20px}
+    label{display:block;margin-bottom:10px;font-weight:bold}
+    textarea{width:100%;min-height:140px;background:#111;color:white;border:1px solid #444;border-radius:10px;padding:14px;font-size:16px;resize:vertical;outline:none}
+    textarea:focus{border-color:#ff0000}
+    button{border:none;border-radius:10px;padding:13px 20px;font-size:16px;font-weight:bold;cursor:pointer}
+    .generate{width:100%;margin-top:15px;background:#ff0000;color:white}
+    .generate:hover{background:#cc0000}
+    .download{display:inline-block;background:#fff;color:#111;text-decoration:none;margin-top:12px;padding:13px 20px;border-radius:10px;font-weight:bold}
+    .download:hover{background:#ddd}
+    .result{display:none}
+    .result h3{color:#ff0000;margin-bottom:12px}
+    .result-box{background:#111;border:1px solid #333;border-radius:10px;padding:15px;margin-bottom:18px;white-space:pre-line;line-height:1.6}
+    .copy-btn{background:#333;color:white;padding:9px 14px;font-size:14px;margin-top:10px}
+    .copy-btn:hover{background:#444}
+    .title-item{background:#111;border:1px solid #333;border-radius:10px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+    .title-text{flex:1;line-height:1.5;overflow-wrap:anywhere}
+    .title-copy{flex-shrink:0;margin-top:0}
+    .app-card{text-align:center}
+    footer{text-align:center;color:#888;padding:25px;border-top:1px solid #333;font-size:14px}
+    .loading{display:none;text-align:center;color:#aaa;margin-top:12px}
+    @media(max-width:600px){
+      .hero h2{font-size:24px}
+      header h1{font-size:23px}
+      .card{padding:16px}
+      .title-item{align-items:flex-start}
+      .title-copy{padding:8px 10px}
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <h1>YT Creator Helper</h1>
   <p>Free YouTube SEO Tool</p>
 </header>
 
 <div class="container">
-
   <section class="hero">
     <h2>Grow Your <span>YouTube Channel</span></h2>
     <p>Create titles, descriptions, hashtags and keywords easily.</p>
@@ -204,27 +59,15 @@
 
   <div class="card">
     <label for="topic">Video Topic or Script</label>
-
-    <textarea
-      id="topic"
-      placeholder="Enter your video topic or script..."
-    ></textarea>
-
-    <button class="generate" onclick="generateSEO()">
-      🚀 Generate SEO Pack
-    </button>
-
-    <div class="loading" id="loading">
-      Generating your SEO pack...
-    </div>
+    <textarea id="topic" placeholder="Enter your video topic or script..."></textarea>
+    <button class="generate" onclick="generateSEO()">🚀 Generate SEO Pack</button>
+    <div class="loading" id="loading">Generating your SEO pack...</div>
   </div>
 
   <div class="result" id="result">
-
     <div class="card">
       <h3>🎯 Catchy Titles (10)</h3>
-      <div class="result-box" id="titles"></div>
-      <button class="copy-btn" onclick="copyText('titles')">📋 Copy Titles</button>
+      <div id="titles"></div>
     </div>
 
     <div class="card">
@@ -244,148 +87,137 @@
       <div class="result-box" id="keywords"></div>
       <button class="copy-btn" onclick="copyText('keywords')">📋 Copy Keywords</button>
     </div>
-
   </div>
 
   <div class="card app-card">
     <h2>📱 YT Creator Helper App</h2>
-    <p style="margin-top:10px;color:#bbb;">
-      Download the Android app and create YouTube SEO content on your phone.
-    </p>
-
-    <a
-      class="download"
-      href="https://github.com/armandulot10-dotcom/YT-Creator-Helper/releases/latest/download/YTCreatorHelper-release-signed.apk"
-    >
-      ⬇️ Download Android APK
-    </a>
+    <p style="margin-top:10px;color:#bbb;">Download the Android app and create YouTube SEO content on your phone.</p>
+    <a class="download" href="https://github.com/armandulot10-dotcom/YT-Creator-Helper/releases/latest/download/YTCreatorHelper-release-signed.apk">⬇️ Download Android APK</a>
   </div>
-
 </div>
 
 <footer>
   © 2026 YT Creator Helper • Free YouTube SEO Tool
+  <br><br>
+  <a href="privacy.html" style="color:#ff4d4d;text-decoration:none;font-weight:bold;">Privacy Policy</a>
 </footer>
 
 <script>
+function generateSEO(){
+  const topic=document.getElementById("topic").value.trim();
+  if(!topic){alert("Please enter your video topic or script.");return;}
+  document.getElementById("loading").style.display="block";
+  document.getElementById("result").style.display="none";
 
-function generateSEO() {
+  setTimeout(function(){
+    const cleanTopic=topic.replace(/\s+/g," ").trim();
+    const shortTopic=cleanTopic.length>70?cleanTopic.substring(0,70)+"...":cleanTopic;
 
-  const topic = document.getElementById("topic").value.trim();
-
-  if (!topic) {
-    alert("Please enter your video topic or script.");
-    return;
-  }
-
-  document.getElementById("loading").style.display = "block";
-  document.getElementById("result").style.display = "none";
-
-  setTimeout(function() {
-
-    const cleanTopic = topic
-      .replace(/\s+/g, " ")
-      .trim();
-
-    const shortTopic = cleanTopic.length > 70
-      ? cleanTopic.substring(0, 70) + "..."
-      : cleanTopic;
-
-    const titles = [
-      "🔥 " + shortTopic,
-      "😱 " + shortTopic + " | Must Watch!",
-      "🚀 " + shortTopic + " - Full Guide",
-      "The Truth About " + shortTopic,
-      "You Won't Believe This! " + shortTopic,
-      "How To " + shortTopic + " | Easy Guide",
-      shortTopic + " | Everything You Need To Know",
-      "Best Tips For " + shortTopic,
-      "Ultimate Guide: " + shortTopic,
-      "🔥 Viral Video: " + shortTopic
+    const titles=[
+      "🔥 "+shortTopic,
+      "😱 "+shortTopic+" | Must Watch!",
+      "🚀 "+shortTopic+" - Full Guide",
+      "The Truth About "+shortTopic,
+      "You Won't Believe This! "+shortTopic,
+      "How To "+shortTopic+" | Easy Guide",
+      shortTopic+" | Everything You Need To Know",
+      "Best Tips For "+shortTopic,
+      "Ultimate Guide: "+shortTopic,
+      "🔥 Viral Video: "+shortTopic
     ];
 
-    const description =
-      "Welcome to YT Creator Helper! 🚀\n\n" +
-      "In this video, we are talking about: " + cleanTopic + "\n\n" +
-      "Watch the complete video to learn useful information, tips and ideas related to this topic.\n\n" +
-      "If you enjoy the video, don't forget to Like 👍, Share 🔁 and Subscribe 🔔.\n\n" +
-      "Thanks for watching!\n\n" +
+    const description=
+      "Welcome to YT Creator Helper! 🚀\n\n"+
+      "In this video, we are talking about: "+cleanTopic+"\n\n"+
+      "Watch the complete video to learn useful information, tips and ideas related to this topic.\n\n"+
+      "If you enjoy the video, don't forget to Like 👍, Share 🔁 and Subscribe 🔔.\n\n"+
+      "Thanks for watching!\n\n"+
       "#YouTube #Creator #YouTubeTips";
 
-    const hashtags = [
-      "#YouTube",
-      "#YouTubeShorts",
-      "#Shorts",
-      "#Viral",
-      "#Trending",
-      "#YouTuber",
-      "#ContentCreator",
-      "#YouTubeCreator",
-      "#Video",
-      "#ViralVideo",
-      "#TrendingNow",
-      "#Creator",
-      "#YouTubeTips",
-      "#YouTubeGrowth",
-      "#SEO",
-      "#ContentCreation",
-      "#DigitalCreator",
-      "#OnlineCreator",
-      "#YTShorts",
-      "#YT"
+    const hashtags=[
+      "#YouTube","#YouTubeShorts","#Shorts","#Viral","#Trending",
+      "#YouTuber","#ContentCreator","#YouTubeCreator","#Video","#ViralVideo",
+      "#TrendingNow","#Creator","#YouTubeTips","#YouTubeGrowth","#SEO",
+      "#ContentCreation","#DigitalCreator","#OnlineCreator","#YTShorts","#YT"
     ].join(" ");
 
-    const keywords = [
-      cleanTopic,
-      shortTopic + " video",
-      shortTopic + " YouTube",
-      shortTopic + " tips",
-      shortTopic + " guide",
-      shortTopic + " tutorial",
-      shortTopic + " latest",
-      shortTopic + " viral",
-      "YouTube tips",
-      "YouTube SEO",
-      "YouTube creator",
-      "viral video",
-      "YouTube growth",
-      "content creation",
-      "YouTube Shorts"
+    const keywords=[
+      cleanTopic,shortTopic+" video",shortTopic+" YouTube",shortTopic+" tips",
+      shortTopic+" guide",shortTopic+" tutorial",shortTopic+" latest",
+      shortTopic+" viral","YouTube tips","YouTube SEO","YouTube creator",
+      "viral video","YouTube growth","content creation","YouTube Shorts"
     ].join(", ");
 
-    document.getElementById("titles").textContent =
-      titles.map((title, i) => (i + 1) + ". " + title).join("\n");
+    document.getElementById("titles").innerHTML=titles.map((title,i)=>`
+      <div class="title-item">
+        <span class="title-text">${escapeHTML((i+1)+". "+title)}</span>
+        <button class="copy-btn title-copy" onclick="copySingleTitle(${i})">📋 Copy</button>
+      </div>
+    `).join("");
 
-    document.getElementById("description").textContent =
-      description;
-
-    document.getElementById("hashtags").textContent =
-      hashtags;
-
-    document.getElementById("keywords").textContent =
-      keywords;
-
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("result").style.display = "block";
-
-  }, 700);
+    document.getElementById("description").textContent=description;
+    document.getElementById("hashtags").textContent=hashtags;
+    document.getElementById("keywords").textContent=keywords;
+    document.getElementById("loading").style.display="none";
+    document.getElementById("result").style.display="block";
+  },700);
 }
 
+function copySingleTitle(index){
+  const topic=document.getElementById("topic").value.trim();
+  const cleanTopic=topic.replace(/\s+/g," ").trim();
+  const shortTopic=cleanTopic.length>70?cleanTopic.substring(0,70)+"...":cleanTopic;
 
-function copyText(elementId) {
+  const titles=[
+    "🔥 "+shortTopic,
+    "😱 "+shortTopic+" | Must Watch!",
+    "🚀 "+shortTopic+" - Full Guide",
+    "The Truth About "+shortTopic,
+    "You Won't Believe This! "+shortTopic,
+    "How To "+shortTopic+" | Easy Guide",
+    shortTopic+" | Everything You Need To Know",
+    "Best Tips For "+shortTopic,
+    "Ultimate Guide: "+shortTopic,
+    "🔥 Viral Video: "+shortTopic
+  ];
 
-  const text = document.getElementById(elementId).innerText;
-
-  navigator.clipboard.writeText(text)
-    .then(function() {
-      alert("Copied to clipboard! ✅");
-    })
-    .catch(function() {
-      alert("Copy failed. Please select and copy manually.");
-    });
+  copyToClipboard(titles[index],"Title copied! ✅");
 }
 
+function copyText(elementId){
+  copyToClipboard(document.getElementById(elementId).innerText,"Copied to clipboard! ✅");
+}
+
+function copyToClipboard(text,successMessage){
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(function(){
+      alert(successMessage);
+    }).catch(function(){fallbackCopy(text,successMessage);});
+  }else{
+    fallbackCopy(text,successMessage);
+  }
+}
+
+function fallbackCopy(text,successMessage){
+  const textarea=document.createElement("textarea");
+  textarea.value=text;
+  textarea.style.position="fixed";
+  textarea.style.opacity="0";
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  try{
+    document.execCommand("copy");
+    alert(successMessage);
+  }catch(error){
+    alert("Copy failed. Please select and copy manually.");
+  }
+  document.body.removeChild(textarea);
+}
+
+function escapeHTML(text){
+  return text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
+}
 </script>
-
 </body>
 </html>
